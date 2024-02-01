@@ -1,26 +1,21 @@
-import 'dart:html';
-
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:little_bute/view/sign%20up.dart';
+import 'package:little_bute/view/login_view.dart';
 
-class LoginView extends StatelessWidget {
-  var email;
-
-   LoginView({super.key});
+class Signup extends StatelessWidget {
+  const Signup({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-        body: Padding(
+    return Scaffold(
+      body: Padding(
           padding: EdgeInsets.all(20.0),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                  const SizedBox(
-                    height: 40,
-                  ),
+                const SizedBox(
+                  height: 40,
+                ),
                 Center(
                   child: Text('Welcome!',style: TextStyle(
                       color: Colors.pinkAccent.shade100,
@@ -32,19 +27,52 @@ class LoginView extends StatelessWidget {
                 SizedBox(
                   height: 40,
                 ),
-                Text('Login',style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.normal,
-                    fontSize: 20,
-            
-            
+                Text('Sign Up',style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20,
+
+
                 ),
                 ),
                 SizedBox(
                   height: 40,
                 ),
                 TextField(
-            
+
+                  decoration:InputDecoration(hintText:"Name Surname",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                        width: 2.0,
+                      ),
+                    ),
+                  ),
+
+
+
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextField(
+
+                  decoration:InputDecoration(hintText:"User Name",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                        width: 2.0,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height:20,
+                ),
+                TextField(
+
                   decoration:InputDecoration(hintText:"Email",
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -54,15 +82,12 @@ class LoginView extends StatelessWidget {
                       ),
                     ),
                   ),
-            
-            
-            
+
+
+
                 ),
                 SizedBox(
                   height:20,
-                ),
-                SizedBox(
-                  height:10,
                 ),
                 TextField(
                   decoration:InputDecoration(hintText:"Password",
@@ -74,8 +99,8 @@ class LoginView extends StatelessWidget {
                       ),
                     ),
                   ),
-            
-            
+
+
                 ),
                 SizedBox(
                   height:60,
@@ -93,14 +118,14 @@ class LoginView extends StatelessWidget {
                       onPressed: () {
                         // Butona tıklandığında yapılacak işlemler
                       },
-                      child: Text('Login',
-                      style: TextStyle(fontSize: 20),),
+                      child: Text('Sign Up',
+                        style: TextStyle(fontSize: 20),),
                     ),
                   ),
                 ),
-              SizedBox(
-                height: 20,
-              ),
+                SizedBox(
+                  height: 20,
+                ),
                 Center(
                   child: SizedBox(
                     height: 50,
@@ -109,19 +134,19 @@ class LoginView extends StatelessWidget {
 
                       onPressed: () {
                         Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Signup(),
-                            ),
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => LoginView(),
+                          ),
                         );
                         // Butona tıklandığında yapılacak işlemler
                       },
-                      child: Text('sign up',
+                      child: const Text('Login here',
                         style: TextStyle(fontSize: 20),),
                     ),
                   ),
                 ),
-              Center(
+                Center(
                   child: Image.asset(
                     "resim/resim2/loginresim.png",
                     width: 300,
@@ -134,7 +159,8 @@ class LoginView extends StatelessWidget {
               ],
             ),
           )
-        ),
+      ),
     );
   }
 }
+
