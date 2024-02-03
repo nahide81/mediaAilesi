@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.pinkAccent,),
         useMaterial3: true,
       ),
-      home:  LoginView(),
+      home:  HomePage(username: 'merhaba',),
     );
   }
 }

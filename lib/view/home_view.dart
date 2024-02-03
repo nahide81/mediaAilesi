@@ -22,9 +22,82 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: Center(
-        child: Text('Welcome ${widget.username}'),
+      body: Column(
+        children: [
+          Center(
+            child: Text('Welcomess ${widget.username}'),
+          ),
+          Center(
+            child: Image.asset(
+              "resim/resim2/LittleBite.png",
+              width: 300,
+              height: 150,),
+          ),
+           Row(
+             children: [
+               GestureDetector(
+                 onTap: (){
+                   print('TODO');
+                 },
+                 child: Image.asset(
+                   "resim/resim2/Group 1686550929.png",
+                   width: 235,
+                   height: 235,),
+               ),
+               GestureDetector(
+                 onTap: (){
+                   print('Food');
+                 },
+                 child: Image.asset(
+                   "resim/resim2/Group 1686550930.png",
+                   width:235,
+                   height: 235,),
+               ),
+
+             ],
+           ),
+          SizedBox(
+            height: 50,
+          ),
+          Row(
+            children: [
+              Center(
+                child: Image.asset(
+                  "resim/resim2/Group 1686550933.png",
+                  width: 235,
+                  height: 235,),
+              ),
+              Center(
+                child: Image.asset(
+                  "resim/resim2/Group 1686550936.png",
+                  width: 250,
+                  height: 235,),
+              ),
+
+
+            ],
+
+          ),
+          Row(
+            children: [
+          Center(
+            child: Image.asset(
+              "resim/resim2/Group 1686550937.png",
+              width: 235,
+              height: 235,),
+          ),
+
+
+          ],
+
+          ),
+
+          SizedBox(
+            height: 20,
+          ),
+        ],
       ),
+
       bottomNavigationBar: BottomNavigationBar(
       items: <BottomNavigationBarItem>[
       BottomNavigationBarItem(
@@ -46,6 +119,7 @@ class _HomePageState extends State<HomePage> {
     ),
 
     );
+
 
   }
 }
