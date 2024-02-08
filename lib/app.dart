@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:little_bute/view/login_view.dart';
 
 import 'view/home_view.dart';
 
@@ -26,10 +27,10 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.pinkAccent,),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home:  HomePage(username: 'merhaba',),
     );
   }
 }
