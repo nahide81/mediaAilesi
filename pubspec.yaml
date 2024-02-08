@@ -65,13 +65,11 @@ flutter:
   assets:
    - resim/resim2/loginresim.png
    - resim/resim2/Vector 4.png
-   - resim/resim2/Group 1686550929.png
    - resim/resim2/LittleBite.png
-   - resim/resim2/Group 1686550930.png
-   - resim/resim2/Group 1686550932.png
-   - resim/resim2/Group 1686550933.png
-   - resim/resim2/Group 1686550936.png
-   - resim/resim2/Group 1686550937.png
+   - resim/resim2/Group 9.png
+   - resim/resim2/Rectangle 1.png
+   - resim/resim2/Rectangle 2.png
+
      #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
