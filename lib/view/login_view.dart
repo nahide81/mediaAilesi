@@ -127,9 +127,7 @@ class LoginView extends StatelessWidget {
                     width: 300,
                     height: 250,),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+
 
               ],
             ),
