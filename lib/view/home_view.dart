@@ -164,26 +164,27 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+      ),
 
       bottomNavigationBar: BottomNavigationBar(
-      items: <BottomNavigationBarItem>[
-      BottomNavigationBarItem(
-      icon: Icon(Icons.home),
-      label: 'Anasayfa',
-    ),
-    BottomNavigationBarItem(
-    icon: Icon(Icons.search),
-    label: 'Arama',
-    ),
-    BottomNavigationBarItem(
-    icon: Icon(Icons.person),
-    label: 'Profil',
-    ),
-    ],
-    currentIndex: _selectedIndex,
-    selectedItemColor: Colors.blue,
-    onTap: _onItemTapped,
-    ),
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Anasayfa',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Arama',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profil',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.blue,
+        onTap: _onItemTapped,
+      ),
 
     );
 
