@@ -145,7 +145,7 @@ class Signup extends StatelessWidget {
                         style: TextStyle(fontSize: 20),),
                     ),
                   ),
-                ),
+                ),         
                 Center(
                   child: Image.asset(
                     "resim/resim2/loginresim.png",
