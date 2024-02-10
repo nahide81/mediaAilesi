@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
                mainAxisAlignment: MainAxisAlignment.spaceAround,
                children: [
                  Expanded(
-                  
+
                    child: GestureDetector(
                      onTap: (){
                        print('TODO');
@@ -121,67 +121,48 @@ class _HomePageState extends State<HomePage> {
                    ),
                  ),
 
-               ],
-             ),
-            SizedBox(
-              height: 50,
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: Center(
-                    child: Stack(
-                      children: [
-                        Image.asset(
-                          "resim/resim2/Ekran Resmi 2024-02-10 12.36.18.png",
-                          width: 200,
-                          height: 200,),
-                        const Positioned(
-                          top: 20,
-                          left: 20,
-
-                          child: Text(
-                            'Walk',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.purple,
-                              fontWeight: FontWeight.bold,
-                            ) ,
+             ],
+           ),
+          SizedBox(
+            height: 50,
+          ),
+          Row(
+            children: [
+              Center(
+                child: Image.asset(
+                  "resim/resim2/Group 1686550933.png",
+                  width: 235,
+                  height: 235,),
+              ),
+              Center(
+                child: Image.asset(
+                  "resim/resim2/Group 1686550936.png",
+                  width: 250,
+                  height: 235,),
+              ),
 
 
+            ],
 
-                          ),
-                        ),
-                        Positioned(
-                        right: 20,
-                        top: 20,
-                          child:Icon(Icons.directions_run,
-                            color: Colors.purple,),
-                        ) ,
-                      ],
-                    ),
-
-                  ),
-
-                ),
-                Expanded(
-                  child: Center(
-                    child: Image.asset(
-                      "resim/resim2/Ekran Resmi 2024-02-10 12.36.18.png",
-                      width: 200,
-                      height: 200,),
-                  ),
-                ),
-
-
-              ],
-
-            ),
-       
+          ),
+          Row(
+            children: [
+          Center(
+            child: Image.asset(
+              "resim/resim2/Group 1686550937.png",
+              width: 235,
+              height: 235,),
+          ),
 
 
           ],
-        ),
+
+          ),
+
+          SizedBox(
+            height: 20,
+          ),
+        ],
       ),
 
       bottomNavigationBar: BottomNavigationBar(
