@@ -22,111 +22,169 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: Column(
-        children: [
-          Center(
-            child: Text('Welcomess ${widget.username}'),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            const Row(
+              children: [
+                Center(
+                  child: Text('Hello,Duru',style: TextStyle(fontSize: 30,
+                  fontFamily: 'Protest Riot'),),
+                ),
+                Spacer(),
+                Icon(Icons.account_circle,size: 50,)
+
+              ],
+
+            ),
+
+
+             Row(
+               mainAxisAlignment: MainAxisAlignment.spaceAround,
+               children: [
+                 Expanded(
+
+                   child: GestureDetector(
+                     onTap: (){
+                       print('TODO');
+                     },
+                     child: Center(
+                       child: Stack(
+                         children: [
+                           Image.asset(
+                             "resim/resim2/Ekran Resmi 2024-02-10 10.31.06.png",
+                              fit: BoxFit.cover,
+                             height: 235,
+                           ),
+                           const Positioned(
+                             top: 20,
+                             left: 15,
+                             width: 135,
+                             child: Text(
+                               'Calories',
+                               style: TextStyle(
+                                 fontSize: 18,
+                                 color: Colors.white,
+                                 fontWeight: FontWeight.bold,
+                               ),
+                             ),
+                           ),
+                            Positioned(
+                             right: 20,
+                             top: 20,
+                             child: Icon(Icons.monitor_heart,
+                               color: Colors.white,),
+                           )
+
+                         ],
+                       ),
+                     ),
+                   ),
+                 ),
+                 Expanded(
+                   child: GestureDetector(
+                     onTap: (){
+                       print('Food');
+                     },
+                     child: Center(
+                       child: Stack(
+                         children: [
+                           Image.asset(
+                             "resim/resim2/Ekran Resmi 2024-02-10 10.36.01.png",
+
+                             height: 235,),
+
+                           Positioned(
+                             top:20,
+                             left:20,
+                             child: Text(
+                               'Water',
+                             style: TextStyle(
+                               fontSize: 20,
+                               color: Colors.purple,
+                               fontWeight: FontWeight.bold
+
+                             )),
+                           ),
+                           Positioned(
+                             right: 20,
+                             top: 20,
+                             child: Icon(Icons.water_drop,
+                               size: 30,
+                               color: Colors.purple,),
+                           )
+
+                         ],
+                       ),
+                     ),
+                   ),
+                 ),
+
+             ],
+           ),
+          SizedBox(
+            height: 50,
           ),
           Row(
             children: [
-
-              SizedBox(
-                width: 180,
-                height: 180,
-                child: Card(
-                  color: const Color.fromRGBO(141, 174, 74, 1.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.search,
-                        color: Colors.white,
-                        size: 50,
-
-
-                      ),
-                      Container(
-                        margin: EdgeInsets.symmetric(vertical: 15.0), // Dikey yönde 8 piksel boşluk ekler
-                        child: Row(),
-                      ),
-
-
-                      Text(
-                        "Search",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              Center(
+                child: Image.asset(
+                  "resim/resim2/Group 1686550933.png",
+                  width: 235,
+                  height: 235,),
               ),
-              SizedBox(
-                width: 180,
-                height: 180,
-                child: Card(
-                  color: const Color.fromRGBO(244, 198, 29, 1.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.fact_check,
-                        color: Colors.white,
-                        size: 70
-                        ,
-                      ),
-                      Text(
-                        "To Do List",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              Center(
+                child: Image.asset(
+                  "resim/resim2/Group 1686550936.png",
+                  width: 250,
+                  height: 235,),
               ),
 
 
-                 ],
-               ),
-         Row(
-           children: [
-           Text('A healthy dieta better life',style: TextStyle(
-           color: Colors.black,
-    fontSize: 30,
-    fontWeight: FontWeight.bold
-    ),)
+            ],
 
-         ],)
+          ),
+          Row(
+            children: [
+          Center(
+            child: Image.asset(
+              "resim/resim2/Group 1686550937.png",
+              width: 235,
+              height: 235,),
+          ),
+
+
+          ],
+
+          ),
+
+          SizedBox(
+            height: 20,
+          ),
         ],
       ),
-
-
-
+      ),
 
       bottomNavigationBar: BottomNavigationBar(
-      items: <BottomNavigationBarItem>[
-      BottomNavigationBarItem(
-      icon: Icon(Icons.home),
-      label: 'Anasayfa',
-    ),
-    BottomNavigationBarItem(
-    icon: Icon(Icons.search),
-    label: 'Arama',
-    ),
-    BottomNavigationBarItem(
-    icon: Icon(Icons.person),
-    label: 'Profil',
-    ),
-    ],
-    currentIndex: _selectedIndex,
-    selectedItemColor: Colors.blue,
-    onTap: _onItemTapped,
-    ),
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Anasayfa',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Arama',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profil',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.blue,
+        onTap: _onItemTapped,
+      ),
 
     );
 
